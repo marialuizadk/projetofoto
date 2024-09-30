@@ -1,39 +1,30 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
+    background-color: #f4f4f4;
 }
 
 h1 {
+    text-align: center;
     color: #333;
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
 }
 
-.photo {
-    margin: 10px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    width: 200px;
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
 
-.photo:hover {
+.gallery img:hover {
     transform: scale(1.05);
-}
-
-.photo img {
-    width: 100%;
-    height: auto;
 }
 
 
